@@ -124,7 +124,7 @@ function initTheme() {
   if (savedTheme) {
     applyTheme(savedTheme);
   } else {
-    applyTheme('dark');
+    applyTheme('light');
   }
 }
 
