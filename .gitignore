@@ -25,3 +25,7 @@ dist/
 build/
 tmp/
 .cache/
+
+# Agent & Skill Tooling
+.agents/
+skills-lock.json
