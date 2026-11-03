@@ -206,10 +206,6 @@ function updateTorchPosition(x, y) {
 function adjustBeamRadius(delta) {
   torchBeamRadius = Math.min(MAX_BEAM, Math.max(MIN_BEAM, torchBeamRadius + delta));
   document.documentElement.style.setProperty('--torch-beam', `${torchBeamRadius}px`);
-  const label = document.getElementById('torch-beam-label');
-  if (label) {
-    label.textContent = `${torchBeamRadius}px`;
-  }
   showToast(`🔦 Spotlight beam: ${torchBeamRadius}px`);
 }
 
