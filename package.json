@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Minimalist, craft-driven developer portfolio with distinct Desktop Workstation and Mobile App experiences.",
   "scripts": {
-    "build": "echo 'Static build ready'",
     "start": "npx -y serve -l 3000 .",
     "dev": "npx -y serve -l 3000 ."
   },
