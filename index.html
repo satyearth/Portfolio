@@ -23,6 +23,21 @@
     <!-- Tech Stack SVG Sprite with authentic developer-icons (https://github.com/xandemon/developer-icons) -->
   <svg style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
     <defs>
+      <!-- developer-icons / simple-icons: excel.svg -->
+      <symbol id="icon-excel" viewBox="0 0 24 24">
+        <path class="excel-icon" fill="#107C41" d="M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7V18H1q-.41 0-.7-.3-.3-.29-.3-.7V7q0-.41.3-.7Q.58 6 1 6h5V2.5q0-.41.3-.7.29-.3.7-.3zM6 13.28l1.42 2.66h2.14l-2.38-3.87 2.34-3.8H7.46l-1.3 2.4-.05.08-.04.09-.64-1.28-.66-1.29H2.59l2.27 3.82-2.48 3.85h2.16zM14.25 21v-3H7.5v3zm0-4.5v-3.75H12v3.75zm0-5.25V7.5H12v3.75zm0-5.25V3H7.5v3zm8.25 15v-3h-6.75v3zm0-4.5v-3.75h-6.75v3.75zm0-5.25V7.5h-6.75v3.75zm0-5.25V3h-6.75v3Z"/>
+      </symbol>
+
+      <!-- developer-icons / simple-icons: powerbi.svg -->
+      <symbol id="icon-powerbi" viewBox="0 0 24 24">
+        <path fill="#F2C811" d="M10 12a1 1 0 0 1 1 1v11H4a1 1 0 0 1-1-1V13a1 1 0 0 1 1-1h6Zm-2-.5V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v17h-4.5V13a1.5 1.5 0 0 0-1.5-1.5H8Zm5-6V1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v22a1 1 0 0 1-1 1h-3.5V7A1.5 1.5 0 0 0 15 5.5h-2Z"/>
+      </symbol>
+
+      <!-- simple-icons: kaggle.svg -->
+      <symbol id="icon-kaggle" viewBox="0 0 24 24">
+        <path fill="#20BEFF" d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.121.351.353v12.274l7.309-7.394c.14-.141.305-.212.492-.212h3.209c.164 0 .25.059.259.178a.333.333 0 0 1-.077.238L10.9 12.042l7.732 11.579c.117.164.199.199.193.238z"/>
+      </symbol>
+
       <!-- developer-icons: python.svg -->
       <symbol id="icon-python" viewBox="0 0 100 100">
         <path fill="#387EB8" d="M49.64 0C24.254 0 25.839 11.01 25.839 11.01l.028 11.405h24.225v3.424H16.245S0 23.997 0 49.612s14.179 24.707 14.179 24.707h8.462V62.432s-.457-14.179 13.952-14.179H60.62s13.5.218 13.5-13.047V13.275S76.17 0 49.64 0M36.282 7.67a4.354 4.354 0 0 1 4.358 4.359 4.355 4.355 0 0 1-6.027 4.027 4.35 4.35 0 0 1-2.69-4.027 4.355 4.355 0 0 1 4.359-4.358"/>
@@ -246,19 +261,18 @@
           <p class="hero-tagline">aspiring data analyst &amp; data engineer</p>
 
           <p class="hero-bio">
-            I'm Satyarth, an aspiring Data Analyst and Data Engineer passionate about exploratory data analysis, data manipulation with Python, mathematical computing, and building robust data workflows. I am actively seeking opportunities to solve real-world problems with data.
+            I enjoy exploring data, finding patterns, and turning raw information into clear, useful insights. My core tools are Excel, SQL, Python, Pandas, NumPy, and Power BI. I enjoy building practical projects and continuously improving my analytical skills.
           </p>
 
           <div class="sidebar-tech-shelf">
             <div class="sidebar-tech-title">Core Stack</div>
             <div class="sidebar-tech-row">
+              <span class="sidebar-tech-chip" title="Excel"><svg><use href="#icon-excel"></use></svg>Excel</span>
+              <span class="sidebar-tech-chip" title="SQL"><svg><use href="#icon-sql"></use></svg>SQL</span>
               <span class="sidebar-tech-chip" title="Python"><svg><use href="#icon-python"></use></svg>Python</span>
-              <span class="sidebar-tech-chip" title="PostgreSQL / SQL"><svg><use href="#icon-postgresql"></use></svg>PostgreSQL</span>
               <span class="sidebar-tech-chip" title="Pandas"><svg><use href="#icon-pandas"></use></svg>Pandas</span>
               <span class="sidebar-tech-chip" title="NumPy"><svg><use href="#icon-numpy"></use></svg>NumPy</span>
-              <span class="sidebar-tech-chip" title="Git"><svg><use href="#icon-git"></use></svg>Git</span>
-              <span class="sidebar-tech-chip" title="MATLAB"><svg><use href="#icon-matlab"></use></svg>MATLAB</span>
-              <span class="sidebar-tech-chip" title="Blender"><svg><use href="#icon-blender"></use></svg>Blender</span>
+              <span class="sidebar-tech-chip" title="Power BI"><svg><use href="#icon-powerbi"></use></svg>Power BI</span>
             </div>
           </div>
         </div>
@@ -299,7 +313,7 @@
             <span class="dot-sep">•</span>
             <a href="https://medium.com/@satyearth" target="_blank" rel="noopener" title="Medium">Medium</a>
             <span class="dot-sep">•</span>
-            <a href="https://www.tensortonic.com/profile/satyearth" target="_blank" rel="noopener" title="TensorTonic">TensorTonic</a>
+            <a href="https://www.kaggle.com/satyearth" target="_blank" rel="noopener noreferrer" title="Kaggle"><svg class="social-icon" aria-hidden="true"><use href="#icon-kaggle"></use></svg>Kaggle</a>
             <span class="dot-sep">•</span>
             <a href="mailto:satyarthranjan1@outlook.com" title="Email">Email</a>
           </div>
@@ -366,16 +380,15 @@
         </div>
         <p class="hero-tagline">aspiring data analyst & data engineer</p>
         <p class="hero-bio">
-          I'm Satyarth, an aspiring Data Analyst and Data Engineer passionate about exploratory data analysis, data manipulation with Python, mathematical computing, and building robust data workflows. I am actively seeking opportunities to solve real-world problems with data.
+          I enjoy exploring data, finding patterns, and turning raw information into clear, useful insights. My core tools are Excel, SQL, Python, Pandas, NumPy, and Power BI. I enjoy building practical projects and continuously improving my analytical skills.
         </p>
         <div class="sidebar-tech-row mobile-tech-row">
+          <span class="sidebar-tech-chip" title="Excel"><svg><use href="#icon-excel"></use></svg>Excel</span>
+          <span class="sidebar-tech-chip" title="SQL"><svg><use href="#icon-sql"></use></svg>SQL</span>
           <span class="sidebar-tech-chip" title="Python"><svg><use href="#icon-python"></use></svg>Python</span>
-          <span class="sidebar-tech-chip" title="PostgreSQL / SQL"><svg><use href="#icon-postgresql"></use></svg>PostgreSQL</span>
           <span class="sidebar-tech-chip" title="Pandas"><svg><use href="#icon-pandas"></use></svg>Pandas</span>
           <span class="sidebar-tech-chip" title="NumPy"><svg><use href="#icon-numpy"></use></svg>NumPy</span>
-          <span class="sidebar-tech-chip" title="Git"><svg><use href="#icon-git"></use></svg>Git</span>
-          <span class="sidebar-tech-chip" title="MATLAB"><svg><use href="#icon-matlab"></use></svg>MATLAB</span>
-          <span class="sidebar-tech-chip" title="Blender"><svg><use href="#icon-blender"></use></svg>Blender</span>
+          <span class="sidebar-tech-chip" title="Power BI"><svg><use href="#icon-powerbi"></use></svg>Power BI</span>
         </div>
       </div>
 

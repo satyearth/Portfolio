@@ -702,6 +702,9 @@ a:hover { color: var(--link-hover); opacity: 0.85; }
 [data-theme="dark"] .sql-icon-stroke {
   stroke: #58A6FF !important;
 }
+[data-theme="dark"] .excel-icon {
+  fill: #34D399 !important;
+}
 
 /* Sections */
 .section { margin-bottom: 36px; }
