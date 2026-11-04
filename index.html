@@ -16,7 +16,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400;1,500&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,100;1,9..144,300..600,100&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#f8f7f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1a1815" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f8f7f4">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Satyarth Ranjan — Data Analyst & Data Engineer">
+  <meta name="twitter:description" content="Aspiring Data Analyst & Data Engineer exploring data analytics, ETL pipelines, Python data libraries, and real-time visualization.">
+  <script>
+    // Always open in light theme by default
+    document.documentElement.setAttribute('data-theme', 'light');
+  </script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -277,17 +287,17 @@
           </div>
         </div>
 
-        <nav class="desktop-nav" aria-label="Desktop Navigation">
-          <button id="nav-home" class="nav-tab active" onclick="showView('home');" aria-label="View Home Section" title="Home (Key: 1)">
+        <nav class="desktop-nav" role="tablist" aria-label="Desktop Navigation">
+          <button id="nav-home" class="nav-tab active" role="tab" aria-selected="true" aria-controls="view-home" onclick="showView('home');" aria-label="View Home Section" title="Home (Key: 1)">
             <span class="nav-indicator"></span>
             <span class="nav-label">Home</span>
           </button>
-          <button id="nav-projects" class="nav-tab" onclick="showView('projects');" aria-label="View Projects Section" title="Projects (Key: 2)">
+          <button id="nav-projects" class="nav-tab" role="tab" aria-selected="false" aria-controls="view-projects" onclick="showView('projects');" aria-label="View Projects Section" title="Projects (Key: 2)">
             <span class="nav-indicator"></span>
             <span class="nav-label">Projects</span>
             <span class="tab-count">6</span>
           </button>
-          <button id="nav-posts" class="nav-tab" onclick="showView('posts');" aria-label="View Articles Section" title="Articles (Key: 3)">
+          <button id="nav-posts" class="nav-tab" role="tab" aria-selected="false" aria-controls="view-posts" onclick="showView('posts');" aria-label="View Articles Section" title="Articles (Key: 3)">
             <span class="nav-indicator"></span>
             <span class="nav-label">Articles</span>
             <span class="tab-count">3</span>
@@ -392,7 +402,7 @@
         </div>
       </div>
 
-      <div id="view-home" class="view-panel active">
+      <div id="view-home" class="view-panel active" role="tabpanel" aria-labelledby="nav-home">
 
         <section class="section fade" aria-labelledby="sec-what-i-do">
           <h2 id="sec-what-i-do" class="section-title">internship experience</h2>
@@ -733,7 +743,7 @@
 
       </div>
 
-      <div id="view-projects" class="view-panel">
+      <div id="view-projects" class="view-panel" role="tabpanel" aria-labelledby="nav-projects" aria-hidden="true">
 
         <div class="projects-header">
           <div class="header-row">
@@ -927,7 +937,7 @@
 
       </div>
 
-      <div id="view-posts" class="view-panel">
+      <div id="view-posts" class="view-panel" role="tabpanel" aria-labelledby="nav-posts" aria-hidden="true">
 
         <div class="posts-header">
           <div class="header-row">
@@ -945,7 +955,7 @@
         <div class="posts-list">
           <a href="https://medium.com/@satyearth/prompt-engineering-the-art-of-getting-better-results-from-ai-b5935a282559" target="_blank" rel="noopener noreferrer" class="post-item fade">
             <div class="post-thumb">
-              <img src="article-prompt-engineering.jpg" alt="Prompt Engineering: The Art of Getting Better Results from AI" loading="lazy" class="post-img">
+              <img src="assets/images/article-prompt-engineering.jpg" alt="Prompt Engineering: The Art of Getting Better Results from AI" width="1024" height="576" decoding="async" loading="lazy" class="post-img">
             </div>
             <div class="post-body">
               <div class="post-title">Prompt Engineering: The Art of Getting Better Results from AI</div>
@@ -960,7 +970,7 @@
 
           <a href="https://medium.com/@satyearth/vibe-coding-the-art-of-building-software-with-ai-3496fedf9d6d" target="_blank" rel="noopener noreferrer" class="post-item fade">
             <div class="post-thumb">
-              <img src="article-vibe-coding.jpg" alt="Vibe Coding: The Art of Building Software With AI" loading="lazy" class="post-img">
+              <img src="assets/images/article-vibe-coding.jpg" alt="Vibe Coding: The Art of Building Software With AI" width="1024" height="576" decoding="async" loading="lazy" class="post-img">
             </div>
             <div class="post-body">
               <div class="post-title">Vibe Coding: The Art of Building Software With AI</div>
@@ -975,7 +985,7 @@
 
           <a href="https://medium.com/@satyearth/how-to-become-an-ai-powered-data-analyst-in-2026-59c183b77a57" target="_blank" rel="noopener noreferrer" class="post-item fade">
             <div class="post-thumb">
-              <img src="article-ai-data-analyst.jpg" alt="How to Become an AI-Powered Data Analyst in 2026" loading="lazy" class="post-img">
+              <img src="assets/images/article-ai-data-analyst.jpg" alt="How to Become an AI-Powered Data Analyst in 2026" width="1024" height="576" decoding="async" loading="lazy" class="post-img">
             </div>
             <div class="post-body">
               <div class="post-title">How to Become an AI-Powered Data Analyst in 2026</div>
@@ -1009,10 +1019,10 @@
           <div class="footer-bottom">
             <p class="footer-copy">© 2026 Satyarth Ranjan • Built with intentional minimalism</p>
             <div class="footer-social-links">
-              <a href="https://linkedin.com/in/satyarth-ranjan" target="_blank" rel="noopener" class="footer-social-link">LinkedIn ↗</a>
+              <a href="https://www.linkedin.com/in/satyearth/" target="_blank" rel="noopener" class="footer-social-link">LinkedIn ↗</a>
               <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="footer-social-link">GitHub ↗</a>
               <a href="https://medium.com/@satyearth" target="_blank" rel="noopener" class="footer-social-link">Medium ↗</a>
-              <a href="https://tensortonic.com/u/satya" target="_blank" rel="noopener" class="footer-social-link">TensorTonic ↗</a>
+              <a href="https://www.tensortonic.com/profile/satyearth" target="_blank" rel="noopener" class="footer-social-link">TensorTonic ↗</a>
             </div>
           </div>
         </div>
@@ -1022,15 +1032,15 @@
 
   </div>
 
-  <nav class="mobile-bottom-bar" aria-label="Mobile Navigation">
-    <button id="mob-nav-home" class="mob-tab active" onclick="showView('home');">
+  <nav class="mobile-bottom-bar" role="tablist" aria-label="Mobile Navigation">
+    <button id="mob-nav-home" class="mob-tab active" role="tab" aria-selected="true" aria-controls="view-home" onclick="showView('home');" aria-label="Home">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
         <polyline points="9 22 9 12 15 12 15 22"></polyline>
       </svg>
       <span>Home</span>
     </button>
-    <button id="mob-nav-projects" class="mob-tab" onclick="showView('projects');">
+    <button id="mob-nav-projects" class="mob-tab" role="tab" aria-selected="false" aria-controls="view-projects" onclick="showView('projects');" aria-label="Projects">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
         <polyline points="2 17 12 22 22 17"></polyline>
@@ -1038,7 +1048,7 @@
       </svg>
       <span>Projects</span>
     </button>
-    <button id="mob-nav-posts" class="mob-tab" onclick="showView('posts');">
+    <button id="mob-nav-posts" class="mob-tab" role="tab" aria-selected="false" aria-controls="view-posts" onclick="showView('posts');" aria-label="Articles">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
         <polyline points="14 2 14 8 20 8"></polyline>
@@ -1048,7 +1058,7 @@
       </svg>
       <span>Articles</span>
     </button>
-    <button id="mob-nav-connect" class="mob-tab" onclick="scrollToConnect();">
+    <button id="mob-nav-connect" class="mob-tab" role="tab" aria-selected="false" aria-controls="connect-section" onclick="scrollToConnect();" aria-label="Connect">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
         <polyline points="22,6 12,13 2,6"></polyline>
@@ -1057,7 +1067,7 @@
     </button>
   </nav>
 
-  <script src="main.js"></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
