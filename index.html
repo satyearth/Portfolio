@@ -188,6 +188,13 @@
       <symbol id="icon-nmit" viewBox="0 0 24 24">
         <path class="nmit-shield-icon" d="M12 2L4 5.5v6.2c0 5.2 3.4 10.1 8 11.3 4.6-1.2 8-6.1 8-11.3V5.5L12 2zm0 3.2l5.5 2.5L12 10.2 6.5 7.7 12 5.2zm-4 6.8h8v1.8c0 2.5-1.7 4.8-4 5.7-2.3-.9-4-3.2-4-5.7V12z"/>
       </symbol>
+      <symbol id="icon-vercel" viewBox="0 0 24 24">
+        <path d="M12 2L24 22H0L12 2Z" fill="currentColor"/>
+      </symbol>
+      <symbol id="icon-code" viewBox="0 0 24 24">
+        <polyline points="16 18 22 12 16 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <polyline points="8 6 2 12 8 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
     </defs>
   </svg>
 
@@ -206,7 +213,7 @@
         </div>
         <div class="mobile-user-text">
           <span class="mobile-name">satyarth ranjan</span>
-          <span class="mobile-status"><span class="status-dot"></span>available</span>
+          <span class="mobile-status">available</span>
         </div>
       </div>
       <div class="mobile-header-actions">
@@ -250,7 +257,7 @@
               <div class="mascot-outer-ring" id="mascotWrapper">
                 <div class="mascot-frame">
                   <div class="mascot-display" id="mascotDisplay">
-                    <span class="mascot-scaler" id="mascotScaler">
+                    <span class="mascot-scaler">
                       <span class="mascot-sprite mascot-directions" id="mascotDirections"></span>
                     </span>
                   </div>
@@ -260,7 +267,6 @@
             <div class="identity-text">
               <h1 class="hero-name">satyarth ranjan</h1>
               <div class="availability-badge">
-                <span class="status-dot"></span>
                 <span>Available for opportunities</span>
               </div>
             </div>
@@ -295,7 +301,7 @@
           <button id="nav-projects" class="nav-tab" role="tab" aria-selected="false" aria-controls="view-projects" onclick="showView('projects');" aria-label="View Projects Section" title="Projects (Key: 2)">
             <span class="nav-indicator"></span>
             <span class="nav-label">Projects</span>
-            <span class="tab-count">6</span>
+            <span class="tab-count">3</span>
           </button>
           <button id="nav-posts" class="nav-tab" role="tab" aria-selected="false" aria-controls="view-posts" onclick="showView('posts');" aria-label="View Articles Section" title="Articles (Key: 3)">
             <span class="nav-indicator"></span>
@@ -383,7 +389,6 @@
           <div class="identity-text">
             <h1 class="hero-name">satyarth ranjan</h1>
             <div class="availability-badge">
-              <span class="status-dot"></span>
               <span>Available for opportunities</span>
             </div>
           </div>
@@ -745,195 +750,207 @@
 
       <div id="view-projects" class="view-panel" role="tabpanel" aria-labelledby="nav-projects" aria-hidden="true">
 
-        <div class="projects-header">
+        <div class="projects-page-header">
           <div class="header-row">
-            <h2 class="section-title">projects</h2>
-            <span class="projects-subtitle">6 featured data & simulation projects</span>
+            <div>
+              <h2 class="section-title">projects showcase</h2>
+              <span class="projects-subtitle">Curated engineering, research &amp; vibe coding builds</span>
+            </div>
           </div>
 
-          <div class="filter-chips" role="toolbar" aria-label="Filter projects by technology">
-            <button class="filter-btn active" aria-pressed="true" onclick="filterProjects('all', this)">All (6)</button>
-            <button class="filter-btn" onclick="filterProjects('Data Analytics', this)"><svg><use href="#icon-eda"></use></svg>Data Analytics</button>
-            <button class="filter-btn" onclick="filterProjects('Data Engineering', this)"><svg><use href="#icon-etl"></use></svg>Data Engineering</button>
-            <button class="filter-btn" onclick="filterProjects('Python', this)"><svg><use href="#icon-python"></use></svg>Python</button>
-            <button class="filter-btn" onclick="filterProjects('3D & Simulation', this)"><svg><use href="#icon-simulation"></use></svg>3D &amp; Simulation</button>
-          </div>
+          <nav class="projects-subnav" aria-label="Projects section navigation">
+            <a href="#sec-projects" class="subnav-chip active" onclick="scrollToProjectSection('sec-projects', this); return false;">
+              <span>01. Projects</span>
+            </a>
+            <a href="#sec-final-year" class="subnav-chip" onclick="scrollToProjectSection('sec-final-year', this); return false;">
+              <svg class="tag-icon" aria-hidden="true"><use href="#icon-kaggle"></use></svg>
+              <span>02. Final Year Projects</span>
+            </a>
+            <a href="#sec-vibe-coding" class="subnav-chip" onclick="scrollToProjectSection('sec-vibe-coding', this); return false;">
+              <svg class="tag-icon" aria-hidden="true"><use href="#icon-code"></use></svg>
+              <span>03. Vibe Coding</span>
+            </a>
+          </nav>
         </div>
 
-        <div class="projects-grid">
-
-          <div class="card fade project-card" data-tags="Data Analytics Python">
-            <div class="card-header">
-              <div class="card-meta">
-                <div class="card-title">
-                  <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="project-title-link">Python Data Analytics &amp; EDA Suite (Indoskill Project)</a>
-                </div>
+        <!-- SECTION 01 — PROJECTS (First) -->
+        <section id="sec-projects" class="project-category-section fade">
+          <div class="category-header">
+            <div class="category-title-wrap">
+              <span class="category-number">01</span>
+              <div>
+                <h3 class="category-title">Projects</h3>
+                <p class="category-subtitle">Personal data pipelines, analytics &amp; engineering builds</p>
               </div>
-            </div>
-            <ul>
-              <li>Developed an end-to-end analytical project: <b>Deep Dive into Python Libraries with Application Projects</b> utilizing <b>NumPy</b>, <b>Pandas</b>, <b>Matplotlib</b>, and <b>Seaborn</b>.</li>
-              <li>Performed exploratory data analysis (EDA), data cleaning, handling null values, and correlation matrix analysis on structured business datasets.</li>
-              <li>Built modular Python automation scripts to generate automated data summaries and publication-quality visual charts.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag"><svg class="tag-icon"><use href="#icon-python"></use></svg>Python</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-pandas"></use></svg>Pandas</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-numpy"></use></svg>NumPy</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-matplotlib"></use></svg>Matplotlib</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-seaborn"></use></svg>Seaborn</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-eda"></use></svg>EDA</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="card-action-link" title="View repository on GitHub">
-                <svg viewBox="0 1 100 97.53" width="13" height="13" fill="currentColor" aria-hidden="true"><use href="#icon-github"></use></svg>
-                <span>GitHub ↗</span>
-              </a>
             </div>
           </div>
 
-          <div class="card fade project-card" data-tags="Data Analytics">
-            <div class="card-header">
-              <div class="card-meta">
-                <div class="card-title">
-                  <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="project-title-link">Computational Data Modeling &amp; Matrix Simulation (MathWorks)</a>
-                </div>
+          <div class="projects-grid">
+            <div class="card project-placeholder-card">
+              <div class="placeholder-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <div class="placeholder-content">
+                <span class="placeholder-badge">Coming Soon</span>
+                <h4 class="placeholder-title">Data Engineering Pipelines</h4>
+                <p class="placeholder-desc">End-to-end data pipelines, ETL workflows, and warehouse modeling projects in development.</p>
               </div>
             </div>
-            <ul>
-              <li>Constructed algorithmic computational models in <b>MATLAB</b> for high-accuracy numerical data analysis and statistical evaluation.</li>
-              <li>Processed multi-dimensional matrices and experimental data distributions to simulate system behavior across test scenarios.</li>
-              <li>Visualized parametric distributions and calculated statistical metrics to validate analytical models.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag"><svg class="tag-icon"><use href="#icon-matlab"></use></svg>MATLAB</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-algo"></use></svg>Data Modeling</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-algo"></use></svg>Numerical Analysis</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-algo"></use></svg>Algorithms</span>
+
+            <div class="card project-placeholder-card">
+              <div class="placeholder-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div class="placeholder-content">
+                <span class="placeholder-badge">Coming Soon</span>
+                <h4 class="placeholder-title">Analytics &amp; Intelligence Dashboards</h4>
+                <p class="placeholder-desc">Exploratory analytics case studies, statistical evaluations, and interactive business intelligence tools.</p>
+              </div>
             </div>
-            <div class="card-footer-action">
-              <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="card-action-link" title="View repository on GitHub">
-                <svg viewBox="0 1 100 97.53" width="13" height="13" fill="currentColor" aria-hidden="true"><use href="#icon-github"></use></svg>
-                <span>GitHub ↗</span>
-              </a>
+          </div>
+        </section>
+
+        <!-- SECTION 02 — FINAL YEAR PROJECTS (Second) -->
+        <section id="sec-final-year" class="project-category-section fade">
+          <div class="category-header">
+            <div class="category-title-wrap">
+              <span class="category-number">02</span>
+              <div>
+                <h3 class="category-title">Final Year Projects</h3>
+                <p class="category-subtitle">Undergraduate engineering capstones &amp; published deep learning research</p>
+              </div>
             </div>
           </div>
 
-          <div class="card fade project-card" data-tags="3D & Simulation">
-            <div class="card-header">
-              <div class="card-meta">
-                <div class="card-title">
-                  <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="project-title-link">Interactive 3D Simulation &amp; Visual Assets (Madras Mindworks)</a>
+          <div class="projects-grid">
+            <!-- Project 1: Vitamin Deficiency AI -->
+            <div class="card project-card">
+              <div class="card-header">
+                <div class="card-meta">
+                  <div class="card-title">
+                    <a href="https://www.kaggle.com/code/satyearth/vitamin-deficiency-ai" target="_blank" rel="noopener noreferrer" class="project-title-link">Vitamin Deficiency AI</a>
+                  </div>
+                  <span class="project-badge">Computer Vision</span>
                 </div>
               </div>
+              <ul>
+                <li>Engineered a deep learning computer vision diagnostic pipeline to identify and classify visual markers of vitamin and nutritional deficiencies.</li>
+                <li>Preprocessed dermatological and clinical symptom datasets, applying convolutional neural networks (CNNs) for multi-class classification and pattern recognition.</li>
+                <li>Published end-to-end exploratory analysis, training checkpoints, evaluation curves, and prediction results on Kaggle.</li>
+              </ul>
+              <div class="tags">
+                <span class="tag"><svg class="tag-icon"><use href="#icon-python"></use></svg>Python</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-algo"></use></svg>Deep Learning</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-eda"></use></svg>Computer Vision</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-simulation"></use></svg>CNN Architecture</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-kaggle"></use></svg>Kaggle</span>
+              </div>
+              <div class="card-footer-action">
+                <a href="https://www.kaggle.com/code/satyearth/vitamin-deficiency-ai" target="_blank" rel="noopener noreferrer" class="card-action-link" title="View notebook on Kaggle">
+                  <svg class="tag-icon" aria-hidden="true"><use href="#icon-kaggle"></use></svg>
+                  <span>View on Kaggle ↗</span>
+                </a>
+              </div>
             </div>
-            <ul>
-              <li>Built real-time interactive simulation environments leveraging <b>Unreal Engine</b>, <b>Blender</b>, and <b>Unity</b>.</li>
-              <li>Modeled, textured, and optimized 3D assets in <b>Blender</b> for high-performance spatial scene rendering.</li>
-              <li>Implemented real-time camera controls, physics interactions, and lighting setups inside <b>Unity</b> and <b>Unreal Engine</b>.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag"><svg class="tag-icon"><use href="#icon-unreal"></use></svg>Unreal Engine</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-blender"></use></svg>Blender</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-unity"></use></svg>Unity</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-blender"></use></svg>3D Modeling</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-simulation"></use></svg>Simulation</span>
+
+            <!-- Project 2: Landslide Detection using DL -->
+            <div class="card project-card">
+              <div class="card-header">
+                <div class="card-meta">
+                  <div class="card-title">
+                    <a href="https://www.kaggle.com/code/satyearth/landslide-detection-using-dl" target="_blank" rel="noopener noreferrer" class="project-title-link">Landslide Detection using DL</a>
+                  </div>
+                  <span class="project-badge">Remote Sensing</span>
+                </div>
+              </div>
+              <ul>
+                <li>Developed an automated deep learning framework for landslide zone detection, risk segmentation, and environmental hazard analysis.</li>
+                <li>Analyzed multi-spectral remote sensing satellite imagery combined with elevation and slope parameters to extract topographical risk features.</li>
+                <li>Trained neural network architectures to detect displacement signatures and support predictive disaster assessment workflows.</li>
+              </ul>
+              <div class="tags">
+                <span class="tag"><svg class="tag-icon"><use href="#icon-python"></use></svg>Python</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-algo"></use></svg>Deep Learning</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-viz"></use></svg>Remote Sensing</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-simulation"></use></svg>CNN / Geospatial</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-kaggle"></use></svg>Kaggle</span>
+              </div>
+              <div class="card-footer-action">
+                <a href="https://www.kaggle.com/code/satyearth/landslide-detection-using-dl" target="_blank" rel="noopener noreferrer" class="card-action-link" title="View notebook on Kaggle">
+                  <svg class="tag-icon" aria-hidden="true"><use href="#icon-kaggle"></use></svg>
+                  <span>View on Kaggle ↗</span>
+                </a>
+              </div>
             </div>
-            <div class="card-footer-action">
-              <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="card-action-link" title="View repository on GitHub">
-                <svg viewBox="0 1 100 97.53" width="13" height="13" fill="currentColor" aria-hidden="true"><use href="#icon-github"></use></svg>
-                <span>GitHub ↗</span>
-              </a>
+          </div>
+        </section>
+
+        <!-- SECTION 03 — VIBE CODING (Third) -->
+        <section id="sec-vibe-coding" class="project-category-section fade">
+          <div class="category-header">
+            <div class="category-title-wrap">
+              <span class="category-number">03</span>
+              <div>
+                <h3 class="category-title">Vibe Coding</h3>
+                <p class="category-subtitle">AI-assisted development, rapid prototypes &amp; LLM-built tools</p>
+              </div>
             </div>
           </div>
 
-          <div class="card fade project-card" data-tags="Data Engineering Python">
-            <div class="card-header">
-              <div class="card-meta">
-                <div class="card-title">
-                  <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="project-title-link">Automated ETL Pipeline &amp; Data Cleaning Engine</a>
+          <div class="projects-grid">
+            <!-- Project: Satyfinance — Personal Wealth Workspace -->
+            <div class="card project-card">
+              <div class="card-header">
+                <div class="card-meta">
+                  <div class="card-title">
+                    <a href="https://finance-five-ruby.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-title-link">Satyfinance — Personal Wealth Workspace</a>
+                  </div>
+                  <span class="project-badge">Next.js / Vercel</span>
                 </div>
               </div>
-            </div>
-            <ul>
-              <li>Engineered an automated <b>Extract, Transform, Load (ETL)</b> pipeline in Python processing raw, unorganized CSV and JSON data.</li>
-              <li>Automated data validation, type conversion, deduplication, and anomaly flagging to ensure clean data ingestion.</li>
-              <li>Structured output records into normalized formats ready for downstream analytical queries and reporting dashboards.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag"><svg class="tag-icon"><use href="#icon-python"></use></svg>Python</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-etl"></use></svg>Data Engineering</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-etl"></use></svg>ETL</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-git"></use></svg>Git</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-wrangling"></use></svg>Data Cleaning</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-pandas"></use></svg>Pandas</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="card-action-link" title="View repository on GitHub">
-                <svg viewBox="0 1 100 97.53" width="13" height="13" fill="currentColor" aria-hidden="true"><use href="#icon-github"></use></svg>
-                <span>GitHub ↗</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="card fade project-card" data-tags="Data Engineering Data Analytics">
-            <div class="card-header">
-              <div class="card-meta">
-                <div class="card-title">
-                  <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="project-title-link">SQL Analytical Warehouse &amp; Reporting Queries</a>
-                </div>
+              <ul>
+                <li>Engineered an AI-native personal wealth workspace with smart expense tracking, dynamic budget targets, and cash flow categorization.</li>
+                <li>Implemented interactive calendar forecasting to monitor settled vs. scheduled expenses, spending velocity, and product lifespan depreciation.</li>
+                <li>Designed a responsive, keyboard-first desktop &amp; mobile UI with instant local state updates and live production deployment on Vercel.</li>
+              </ul>
+              <div class="tags">
+                <span class="tag"><svg class="tag-icon"><use href="#icon-vercel"></use></svg>Next.js</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-code"></use></svg>Vibe Coding</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-viz"></use></svg>Financial Analytics</span>
+                <span class="tag"><svg class="tag-icon"><use href="#icon-vercel"></use></svg>Vercel</span>
+              </div>
+              <div class="card-footer-action">
+                <a href="https://finance-five-ruby.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-action-link" title="Open Satyfinance web app in new tab">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Live App ↗</span>
+                </a>
               </div>
             </div>
-            <ul>
-              <li>Designed relational database schemas with primary/foreign key integrity, indexing, and normalized tables.</li>
-              <li>Authored advanced <b>SQL queries</b> incorporating window functions, complex joins, CTEs, and group aggregations.</li>
-              <li>Extracted actionable KPIs, cohort trends, and performance metrics from transactional tables.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag"><svg class="tag-icon"><use href="#icon-postgresql"></use></svg>PostgreSQL</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-sql"></use></svg>SQL</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-mysql"></use></svg>MySQL</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-dbms"></use></svg>DBMS</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-eda"></use></svg>Data Analytics</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-algo"></use></svg>Aggregations</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-dbms"></use></svg>Relational Schemas</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="card-action-link" title="View repository on GitHub">
-                <svg viewBox="0 1 100 97.53" width="13" height="13" fill="currentColor" aria-hidden="true"><use href="#icon-github"></use></svg>
-                <span>GitHub ↗</span>
-              </a>
-            </div>
-          </div>
 
-          <div class="card fade project-card" data-tags="Data Analytics Python">
-            <div class="card-header">
-              <div class="card-meta">
-                <div class="card-title">
-                  <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="project-title-link">Interactive Trend Analysis &amp; Metrics Dashboard</a>
-                </div>
+            <div class="card project-placeholder-card">
+              <div class="placeholder-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="placeholder-content">
+                <span class="placeholder-badge">Coming Soon</span>
+                <h4 class="placeholder-title">Autonomous Agents &amp; Tools</h4>
+                <p class="placeholder-desc">Specialized AI agents, prompt-driven automation tools, and rapid prototyping experiments.</p>
               </div>
             </div>
-            <ul>
-              <li>Built an exploratory visualization tool allowing multi-filter data inspection across categorical and numeric variables.</li>
-              <li>Plotted time-series trends, moving averages, and demographic breakdowns for clear, intuitive data storytelling.</li>
-              <li>Enabled dynamic parameter adjustments to empower data-driven evaluation without manual spreadsheet rework.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag"><svg class="tag-icon"><use href="#icon-python"></use></svg>Python</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-viz"></use></svg>Data Visualization</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-matplotlib"></use></svg>Matplotlib</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-seaborn"></use></svg>Seaborn</span>
-              <span class="tag"><svg class="tag-icon"><use href="#icon-eda"></use></svg>Analytics</span>
-            </div>
-            <div class="card-footer-action">
-              <a href="https://github.com/satyarthranjan" target="_blank" rel="noopener" class="card-action-link" title="View repository on GitHub">
-                <svg viewBox="0 1 100 97.53" width="13" height="13" fill="currentColor" aria-hidden="true"><use href="#icon-github"></use></svg>
-                <span>GitHub ↗</span>
-              </a>
-            </div>
           </div>
-
-        </div>
+        </section>
 
       </div>
 

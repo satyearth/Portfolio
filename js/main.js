@@ -1,7 +1,7 @@
 /**
  * Satyarth Ranjan — Portfolio & CV
  * Craft-driven developer portfolio with workstation desktop & mobile app experience.
- * Modules: Theme, View Switcher, Project Filter, Copy Email, Fade Animations,
+ * Modules: Theme, View Switcher, Project Showcase Navigation, Copy Email, Fade Animations,
  * Spotlight Mode (The Real Dark Mode), and 8-Directional Interactive Mascot.
  */
 
@@ -160,32 +160,42 @@ function performScrollToConnect() {
 }
 
 // ============================================================================
-// 3. Project Filter
+// 3. Project Showcase Navigation & Filter
 // ============================================================================
-function filterProjects(filterTag, btn) {
-  const buttons = document.querySelectorAll('.filter-btn');
-  buttons.forEach((b) => {
-    b.classList.remove('active');
-    b.setAttribute('aria-pressed', 'false');
-  });
-
-  if (btn) {
-    btn.classList.add('active');
-    btn.setAttribute('aria-pressed', 'true');
+function scrollToProjectSection(sectionId, btn) {
+  const el = document.getElementById(sectionId);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  const cards = document.querySelectorAll('.project-card');
-  cards.forEach((card) => {
-    const tags = card.getAttribute('data-tags') || '';
-    if (filterTag === 'all' || tags.includes(filterTag)) {
-      card.classList.remove('filtered-out');
-      card.classList.add('in');
-    } else {
-      card.classList.add('filtered-out');
-    }
+  const chips = document.querySelectorAll('.subnav-chip');
+  chips.forEach((c) => c.classList.remove('active'));
+  if (btn) {
+    btn.classList.add('active');
+  }
+}
+
+function initProjectScrollSpy() {
+  if (!('IntersectionObserver' in window)) return;
+  const sections = document.querySelectorAll('.project-category-section');
+  if (!sections.length) return;
+
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        const chip = document.querySelector(`.subnav-chip[href="#${id}"]`);
+        if (chip) {
+          document.querySelectorAll('.subnav-chip').forEach((c) => c.classList.remove('active'));
+          chip.classList.add('active');
+        }
+      }
+    });
+  }, {
+    threshold: 0.35
   });
 
-  triggerFades();
+  sections.forEach((sec) => spyObserver.observe(sec));
 }
 
 // ============================================================================
@@ -511,12 +521,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   triggerFades();
   initMascot();
+  initProjectScrollSpy();
 });
 
 // Bind functions to window so any existing inline HTML references remain 100% functional
 window.showView = showView;
 window.scrollToConnect = scrollToConnect;
-window.filterProjects = filterProjects;
+window.scrollToProjectSection = scrollToProjectSection;
 window.copyEmail = copyEmail;
 window.showToast = showToast;
 window.toggleTheme = toggleTheme;
